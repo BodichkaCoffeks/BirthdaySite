@@ -1,0 +1,141 @@
+body {
+  background: linear-gradient(135deg, #fed0a5 0%, #f3adc5 50%, #99b0fc 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+p {
+  margin: 0;
+}
+
+.card-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-6deg);
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  font-family: "Caveat", cursive;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.top-text {
+  font-size: 3.8rem;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.down-text {
+  font-size: 5.5rem;
+  font-weight: 800;
+  justify-content: center;
+}
+
+.heart {
+  font-size: 4rem;
+  color: #fff;
+  margin-top: 0.5rem;
+  transform: rotate(6deg);
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 1s;
+}
+
+.sticks {
+  position: absolute;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 1s;
+}
+
+.stick {
+  width: 3rem;
+  height: 0.3rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+.left-sticks {
+  top: 0px;
+  left: 25px;
+}
+
+.left-sticks .stick-1 {
+  transform: rotate(35deg);
+  margin-bottom: 22px;
+}
+
+.left-sticks .stick-2 {
+  transform: rotate(10deg);
+}
+
+.right-sticks {
+  top: 22px;
+  right: 25px;
+}
+
+.right-sticks .stick-1 {
+  transform: rotate(-30deg);
+  margin-bottom: 24px;
+}
+
+.right-sticks .stick-2 {
+  transform: rotate(-10deg);
+}
+
+.scroll-forward {
+  margin-top: 50px;
+  background-color: transparent;
+  min-width: 250px;
+  min-height: 50px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 5px;
+  border: 2px #ffffff solid;
+  transition:
+    background-color 0.3s ease,
+    color 0.5s ease,
+    font-size 0.5s ease;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 3s;
+}
+
+.scroll-forward:hover {
+  background-color: #fff;
+  color: #4b4e4b;
+  cursor: pointer;
+}
+
+.scroll-forward:active {
+  opacity: 0.8;
+  font-size: 15px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
