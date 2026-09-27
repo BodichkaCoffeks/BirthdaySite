@@ -7,6 +7,7 @@ body {
   min-height: 100vh;
   margin: 0;
   overflow: hidden;
+  background-repeat: no-repeat;
 }
 
 p {
@@ -118,15 +119,41 @@ p {
   animation-delay: 3s;
 }
 
-.scroll-forward:hover {
-  background-color: #fff;
-  color: #4b4e4b;
-  cursor: pointer;
-}
-
 .scroll-forward:active {
   opacity: 0.8;
   font-size: 15px;
+}
+
+@media (hover: hover) {
+  .scroll-forward:hover {
+    background-color: #fff;
+    color: #4b4e4b;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 600px) {
+  .down-text {
+    font-size: 15vw;
+  }
+
+  .top-text {
+    font-size: 10vw;
+  }
+
+  .stick {
+    width: 7vw;
+    height: 0.7vw;
+  }
+
+  .left-sticks {
+    left: 7vw;
+  }
+
+  .right-sticks {
+    right: 7vw;
+    top: 10px;
+  }
 }
 
 @keyframes fadeInUp {
